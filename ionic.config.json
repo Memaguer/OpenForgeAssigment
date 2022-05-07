@@ -1,0 +1,7 @@
+{
+  "name": "OpenForgeAssigment",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
