@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'OpenForgeAssigment',
+  appName: 'OpenForgeAssigment-test',
   webDir: 'www',
   bundledWebRuntime: false
 };

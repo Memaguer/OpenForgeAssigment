@@ -24,3 +24,33 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// *********************************************************************************
+//    ___ _   _ ___| |_ ___  _ __ ___    ___| |_ _   _| | ___  ___ 
+//   / __| | | / __| __/ _ \| '_ ` _ \  / __| __| | | | |/ _ \/ __|
+//  | (__| |_| \__ \ || (_) | | | | | | \__ \ |_| |_| | |  __/\__ \
+//   \___|\__,_|___/\__\___/|_| |_| |_| |___/\__|\__, |_|\___||___/
+//                                               |___/   
+.toast-error {
+    --background: #d52a41;
+    --color: #fff;
+    text-align: center;
+}
+
+.toast-success {
+    --background: #23a356;
+    --color: #fff;
+    text-align: center;
+}
+
+.app-title {
+    text-align: center;
+    color: #606060;
+}
+
+.app-loader {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #6c686f;
+}

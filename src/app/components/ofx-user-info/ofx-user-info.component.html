@@ -1,0 +1,9 @@
+<ion-item (click)="openLink()">
+  <ion-thumbnail slot="start">
+    <img [src]="'assets/svg/' + type +'.svg'">
+  </ion-thumbnail>
+  <ion-label>
+    <p class="info">{{ value }}</p>
+    <p>{{ type }}</p>
+  </ion-label>
+</ion-item>

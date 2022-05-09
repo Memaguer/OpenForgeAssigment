@@ -1,0 +1,11 @@
+<ofx-header title="Feed"></ofx-header>
+
+<ion-content>
+
+  <ofx-user-item *ngFor="let user of users" [user]="user"></ofx-user-item>
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="loading...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

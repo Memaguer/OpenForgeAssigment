@@ -1,0 +1,11 @@
+<ion-item (click)="viewUser()">
+  <ion-avatar slot="start">
+    <img [src]="user.avatar_url">
+  </ion-avatar>
+  <ion-label>
+    <h1 class="title">{{ user.login }}</h1>
+    <div class="user-chips">
+      <ofx-user-numbers [user]="user?.detail"></ofx-user-numbers>
+    </div>
+  </ion-label>
+</ion-item>

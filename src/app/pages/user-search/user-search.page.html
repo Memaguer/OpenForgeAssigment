@@ -1,0 +1,51 @@
+<ofx-header title="User"></ofx-header>
+
+<ion-content>
+  <div id="search-container">
+    <ion-searchbar [value]="login" showClearButton="never" (ionFocus)="ionSearchbarFocus($event)" mode="ios">
+    </ion-searchbar>
+    <ion-button slot="end" (click)="search()" mode="ios">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="bg-div"></div>
+  <ion-card id="card-user" *ngIf="user">
+    <ion-avatar>
+      <img [src]="user?.avatar_url" onError="this.src='assets/svg/github.svg'">
+    </ion-avatar>
+    <ion-card-title>{{ user?.login }}</ion-card-title>
+  </ion-card>
+
+  <ion-card *ngIf="user">
+    <ion-card-content>
+      <ofx-user-numbers [user]="user" *ngIf="user"></ofx-user-numbers>
+    </ion-card-content>
+
+    <ion-card-header *ngIf="user?.bio">
+      <ion-card-title>Bio</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content *ngIf="user?.bio">{{ user?.bio }}</ion-card-content>
+
+    <ion-card-header *ngIf="user?.blog || user?.twitter_username || user?.company || user?.email || user?.location">
+      <ion-card-title>Info</ion-card-title>
+    </ion-card-header>
+    <ofx-user-info type="blog" [value]="user?.blog" *ngIf="user?.blog"></ofx-user-info>
+    <ofx-user-info type="twitter" [value]="user?.twitter_username" *ngIf="user?.twitter_username"></ofx-user-info>
+    <ofx-user-info type="company" [value]="user?.company" *ngIf="user?.company"></ofx-user-info> 
+    <ofx-user-info type="email" [value]="user?.email" *ngIf="user?.email"></ofx-user-info>
+    <ofx-user-info type="location" [value]="user?.location" *ngIf="user?.location"></ofx-user-info>
+  </ion-card>
+
+  <ion-card *ngIf="!user && fail" id="card-lookup">
+    <ion-card-header>
+      <ion-card-title>Look up</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Search github accounts in search bar</h2>
+      <img src="assets/gif/github.gif">
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

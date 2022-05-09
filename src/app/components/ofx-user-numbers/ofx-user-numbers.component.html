@@ -1,0 +1,14 @@
+<ion-row>
+  <ion-col [ngClass]="{ 'p-repository': user?.public_repos > 2 }">
+    <p class="subtitle">Repositories</p>
+    <p class="amount">{{ user?.public_repos | ofxNumber }}</p>
+  </ion-col>
+  <ion-col>
+    <p class="subtitle">Followers</p>
+    <p class="amount">{{ user?.followers | ofxNumber }}</p>
+  </ion-col>
+  <ion-col>
+    <p class="subtitle">Following</p>
+    <p class="amount">{{ user?.following | ofxNumber }}</p>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,25 @@
+ion-toolbar {
+    --background: #383636;
+    color: #FFF;
+}
+
+img {
+    height: 36px;
+    width: 30px;
+    position: absolute;
+    left: 25px;
+    top: 5px;
+}
+
+
+ion-label {
+    display: inline-flex;
+    align-items: center;
+    p {
+        color: #FFF;
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+
+}
